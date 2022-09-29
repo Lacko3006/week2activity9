@@ -26,6 +26,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   min-width: 300px;
+  
 }
 
 nav a {
@@ -59,9 +60,35 @@ article p {
   font-size: 110%;
 }
 
-/* TODO: Style the term/phrase - underline, black text, grab cursor */
+.resources {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-/* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #13293d;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 
 aside {
   width: 25%;
